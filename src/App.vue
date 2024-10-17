@@ -1,4 +1,43 @@
 <template>
+<br>
+  <br>
+  <br>
+  <div>
+    <!-- <pre>
+      {{JSON.stringify(formValues, null, 2)}}
+    </pre> -->
+  </div>
+  <!-- <form @submit="submitForm">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="inputname" v-model="formValues.name">
+    </div>
+    <div>
+      <input type="checkbox" name="checkbox" v-model="formValues.remoteWork">
+      <label for="checkbox">Are you open to remote work?</label>
+    </div>
+    <div>
+      <input type="checkbox" name="html" value="html" id="inputcss" v-model="formValues.skillSet">
+      <label for="html">HTML</label>
+      <input type="checkbox" name="css" value="css" id="inputcss" v-model="formValues.skillSet">
+      <label for="css">CSS</label>
+      <input type="checkbox" name="js" value="js" id="inputjs" v-model="formValues.skillSet">
+      <label for="js">JAVASCRIPT</label>
+    </div>
+    <div>
+      <input type="radio" name="0-3" value="0-3" id="input0-3" v-model="formValues.yearsofExperience">
+      <label for="0-3">0-3</label>
+      <input type="radio" name="4-6" value="4-6" id="input4-6" v-model="formValues.yearsofExperience">
+      <label for="4-6">4-6</label>
+      <input type="radio" name="6-9" value="6-9" id="input6-9"  v-model="formValues.yearsofExperience">
+      <label for="6-9">6-9</label>
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+  </form> -->
+  <br>
+  <br>
   <div>{{ greet }} {{ name }}</div>
   <br>
   <div v-text="channel" style="font-weight: bold;"></div>
@@ -7,7 +46,7 @@
   <div><b v-text="channel" ></b></div>
   <br>
   <br>
-  <h2 v-bind:id="headinId">Attribute Binded</h2>
+  <h2 v-bind:id="inputheadinId">Attribute Binded</h2>
   <br>
   <br>
   <button v-bind:disabled="isDisabled">Bind Diasable Attribute</button>
@@ -53,10 +92,20 @@ export default {
   name: 'App',
   data() {
     return {
+    formValues: {
+      name: "",
+      remoteWork: false,
+      skillSet: [],
+      // yearsofExperience: []
+    },
       methods: {
         add(a, b, c) {
           return a + b + c
         },
+        // submitForm(event) {
+        //   event.preventDefault();
+        //   console.log("Form Values" + this.formValues)
+        // }
       },
       eventName: "Event Name: Kibet",
       name: "Chebon kelvin Kibet",
