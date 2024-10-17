@@ -1,19 +1,35 @@
 <template>
-  <!-- <GreetVue name="Kelvin" heroName="KK"/>
+  <div>
+    <!-- <GreetVue name="Kelvin" heroName="KK"/>
   <GreetVue name="Kibet" heroName="KC"/> -->
   
-  <ArticleVue :likes="50" :isPublished="false"/>
+  <!-- <ArticleVue id="myArticle" :likes="50" :isPublished="false"/> -->
+  <h3>AppComponent username: {{name}}</h3>
+  <ComponentCVue />
+  </div>
 </template>
 
 <script>
-import ArticleVue from './components/ArticleVue.vue'
+import ComponentCVue from './components/ComponentC.vue'
+// import ArticleVue from './components/ArticleVue.vue'
 // import GreetVue from './components/GreetVue.vue'
 
 export default {
   name: 'App',
   components : {
     // GreetVue,
-    ArticleVue,
+    // ArticleVue,
+    ComponentCVue,
+  },
+  data(){
+    return{
+      name: "Cartoon"
+    }
+  },
+  provide() {
+    return {
+      username: this.name
+    }
   }
 }
 </script>
