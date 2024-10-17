@@ -2,17 +2,17 @@
   <!-- <GreetVue name="Kelvin" heroName="KK"/>
   <GreetVue name="Kibet" heroName="KC"/> -->
   
-  <ArticleVue/>
+  <ArticleVue :likes="50" :isPublished="false"/>
 </template>
 
 <script>
 import ArticleVue from './components/ArticleVue.vue'
-import GreetVue from './components/GreetVue.vue'
+// import GreetVue from './components/GreetVue.vue'
 
 export default {
   name: 'App',
   components : {
-    GreetVue,
+    // GreetVue,
     ArticleVue,
   }
 }
