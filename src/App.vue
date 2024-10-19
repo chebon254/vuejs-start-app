@@ -52,24 +52,26 @@
         {{ slotProps.firstName}} {{ slotProps.lastName}}
       </template> 
     </NameListVue>-->
-    <button @click="activeTab = 'TabAVue'">Tab A</button>
+    <!-- <button @click="activeTab = 'TabAVue'">Tab A</button>
     <button @click="activeTab = 'TabBVue'">Tab B</button>
     <button @click="activeTab = 'TabCVue'">Tab C</button>
 
-    <component :is="activeTab"/>
+    <component :is="activeTab"/> -->
     
     <!-- 
     <TabAVue v-if="activeTab === 'TabA'"/>
     <TabBVue v-if="activeTab === 'TabB'"/>
     <TabCVue v-if="activeTab === 'TabC'"/> 
     -->
+    <PostListVue/>
   </div>
 </template>
 
 <script>
-import TabAVue from './components/TabA.vue'
-import TabBVue from './components/TabB.vue'
-import TabCVue from './components/TabC.vue'
+import PostListVue from './components/PostListVue.vue'
+// import TabAVue from './components/TabA.vue'
+// import TabBVue from './components/TabB.vue'
+// import TabCVue from './components/TabC.vue'
 
 // import NameListVue from './components/NameListVue.vue'
 // import CardVue from './components/CardVue.vue'
@@ -82,9 +84,10 @@ import TabCVue from './components/TabC.vue'
 export default {
   name: 'App',
   components : {
-    TabAVue,
-    TabBVue,
-    TabCVue,
+    PostListVue
+    // TabAVue,
+    // TabBVue,
+    // TabCVue,
     // NameListVue,
     // CardVue,
     // InputVue,
@@ -93,11 +96,11 @@ export default {
     // ArticleVue,
     // ComponentCVue,
   },
-  data() {
-    return{
-      activeTab: 'TabA'
-    }
-  }
+  // data() {
+  //   return{
+  //     activeTab: 'TabA'
+  //   }
+  // }
   // Props 2
   // data() {
   //   return {
