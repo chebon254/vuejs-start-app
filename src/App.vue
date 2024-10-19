@@ -63,12 +63,14 @@
     <TabBVue v-if="activeTab === 'TabB'"/>
     <TabCVue v-if="activeTab === 'TabC'"/> 
     -->
-    <PostListVue/>
+    <!-- <PostListVue/> -->
+    <HoverVue/>
   </div>
 </template>
 
 <script>
-import PostListVue from './components/PostListVue.vue'
+import HoverVue from './components/HoverVue.vue'
+// import PostListVue from './components/PostListVue.vue'
 // import TabAVue from './components/TabA.vue'
 // import TabBVue from './components/TabB.vue'
 // import TabCVue from './components/TabC.vue'
@@ -84,7 +86,8 @@ import PostListVue from './components/PostListVue.vue'
 export default {
   name: 'App',
   components : {
-    PostListVue
+    HoverVue
+    // PostListVue,
     // TabAVue,
     // TabBVue,
     // TabCVue,
