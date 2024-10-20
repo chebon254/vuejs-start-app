@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 @mouseover="incrementCount">Clicked {{count}} times</h1>
+        <h1 @mouseover="incrementCount">Hover {{count}} times</h1>
     </div>
 </template>
 
