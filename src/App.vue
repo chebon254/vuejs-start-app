@@ -65,10 +65,12 @@
     -->
     <!-- <PostListVue/> -->
     <!-- <HoverVue/> -->
+    <ClickCounter/>
   </div>
 </template>
 
 <script>
+import ClickCounter  from "./components/ClickCounter.vue";
 // import HoverVue from './components/HoverVue.vue'
 // import PostListVue from './components/PostListVue.vue'
 // import TabAVue from './components/TabA.vue'
@@ -86,6 +88,7 @@
 export default {
   name: 'App',
   components : {
+    ClickCounter
     // HoverVue
     // PostListVue,
     // TabAVue,
